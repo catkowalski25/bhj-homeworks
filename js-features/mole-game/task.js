@@ -4,6 +4,7 @@ const lostSpan = document.getElementById('lost');
 function holeClick(){
     let deadCounter = + deadSpan.textContent;
     let lostCounter = + lostSpan.textContent;
+    
     if (this.className.includes('hole_has-mole')){
         deadCounter++
     } else {
