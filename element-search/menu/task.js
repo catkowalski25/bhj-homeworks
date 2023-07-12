@@ -1,6 +1,8 @@
 function showMenu () {
-    menuSub = this.firstElementChild.nextElementSibling;
+    let a = this.firstElementChild;
+    let menuSub = a.nextElementSibling;
     if (menuSub){
+        a.href = "javascript:void";
         if (menuSub.className.includes(" menu_active")){
             menuSub.className = menuSub.className.replace(" menu_active", "");
         } else {
