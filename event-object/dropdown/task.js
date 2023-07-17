@@ -5,7 +5,8 @@ dropdowns.forEach(dropdown => {
 function clickDropdown(event) {
    let clicked = event.target;
    let value = this.querySelector('.dropdown__value');
-   clicked.closest('.dropdown__list').classList.toggle('.dropdown__list-active');
-   value.innerHTML = clicked.innerHTML;
+   let ul = this.querySelector('.dropdown__list');
+   ul.classList.toggle('.dropdown__list-active');
+   if (clicked !== ul){value.innerHTML = clicked.textContent};
    event.preventDefault();
 }
