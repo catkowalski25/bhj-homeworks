@@ -2,6 +2,10 @@ const taskList = document.getElementById('tasks__list');
 const taskInput = document.getElementById('task__input');
 document.getElementById('tasks__add').addEventListener('click',addTask);
 
+document.addEventListener('keypress', (event) => {
+   if (event.key === 'Enter') {addTask(event)};
+ });
+
 function addTask(event) {
    event.preventDefault();
    let newTaskValue = taskInput.value;
